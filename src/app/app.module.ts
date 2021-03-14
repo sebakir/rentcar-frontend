@@ -1,28 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NaviComponent } from './component/navi/navi.component';
-import { CustomerComponent } from './component/customer/customer.component';
-import { BrandComponent } from './component/brand/brand.component';
-import { ColorComponent } from './component/color/color.component';
-import { RentalComponent } from './component/rental/rental.component';
-import { CarComponent } from './component/car/car.component';
+import { BrandComponent } from './components/brand/brand.component';
+import { ColorComponent } from './components/color/color.component';
+import { NaviComponent } from './components/navi/navi.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { CarComponent } from './components/car/car.component';
+import { RentalComponent } from './components/rental/rental.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NaviComponent,
-    CustomerComponent,
     BrandComponent,
     ColorComponent,
-    RentalComponent,
-    CarComponent
+    NaviComponent,
+    CustomerComponent,
+    CarComponent,
+    RentalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

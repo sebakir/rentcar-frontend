@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rentCar": {
+    "CarProject": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rentCar",
+            "outputPath": "dist/CarProject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rentCar:build"
+            "browserTarget": "CarProject:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rentCar:build:production"
+              "browserTarget": "CarProject:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rentCar:build"
+            "browserTarget": "CarProject:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rentCar:serve"
+            "devServerTarget": "CarProject:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rentCar:serve:production"
+              "devServerTarget": "CarProject:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "rentCar"
+  "defaultProject": "CarProject"
 }
