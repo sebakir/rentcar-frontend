@@ -1,21 +1,22 @@
-<div *ngIf="dataLoaded == false" class="spinner-border text-info" role="status">
-  <span class="visually-hidden">Loading...</span>
+<div *ngIf="!dataLoaded" class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
 </div>
-<table *ngIf = "dataLoaded==true" class="table">
-  <thead>
-    <th>Rental Id</th>
-    <th>Brand Name</th>
-    <th>First Name & Last Name</th>
-    <th>Rent Date</th>
-    <th>Return Date</th>
-</thead>
-<tbody>
+<table *ngIf="dataLoaded" class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Araba adı</th>
+            <th>Kirayalan kişi</th>
+            <th>Kiralama Tarihi</th>
+            <th>Geri getirme tarihi</th>
+        </tr>
+    </thead>
     <tr *ngFor="let rental of rentals">
-        <td>{{rental.id}}</td>
-        <td>{{rental.brandName}}</td>
-        <td>{{rental.userName}}</td>
+        <td>{{rental.rentalId}}</td>
+        <td>{{rental.carName}}</td>
+        <td>{{rental.customerFullName}}</td>
         <td>{{rental.rentDate}}</td>
         <td>{{rental.returnDate}}</td>
     </tr>
-</tbody>
-</table> 
+</table>
+

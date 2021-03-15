@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CarProject": {
+    "car-rental-ng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/CarProject",
+            "outputPath": "dist/car-rental-ng",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
@@ -66,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CarProject:build"
+            "browserTarget": "car-rental-ng:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CarProject:build:production"
+              "browserTarget": "car-rental-ng:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CarProject:build"
+            "browserTarget": "car-rental-ng:build"
           }
         },
         "test": {
@@ -114,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "CarProject:serve"
+            "devServerTarget": "car-rental-ng:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "CarProject:serve:production"
+              "devServerTarget": "car-rental-ng:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "CarProject"
+  "defaultProject": "car-rental-ng"
 }
