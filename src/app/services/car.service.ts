@@ -9,7 +9,7 @@ import { CarDetail } from '../models/carDetail';
 })
 export class CarService {
 
-  apiUrl = 'https://localhost:5001/api/';
+  apiUrl = 'https://localhost:44387/api/';
 
   constructor(private httpClient: HttpClient) { }
 

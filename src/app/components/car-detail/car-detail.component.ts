@@ -17,7 +17,7 @@ export class CarDetailComponent implements OnInit {
   carImagePaths: string[] = [];
   car: CarDetail;
   dataLoaded = false;
-  imageUrl = "https://localhost:5001/";
+  imageUrl = "https://localhost:44387/";
   constructor(private carService: CarService,
     private carImageService: CarImageService, 
     private activatedRoute:ActivatedRoute,

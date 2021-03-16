@@ -8,7 +8,7 @@ import { Color } from '../models/color';
   providedIn: 'root'
 })
 export class ColorService {
-  apiUrl = 'https://localhost:5001/api/';
+  apiUrl = 'https://localhost:44387/api/';
 
   constructor(private httpClient: HttpClient) { }
 
